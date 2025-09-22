@@ -35,7 +35,7 @@ public class Administrador extends javax.swing.JFrame {
     private TableRowSorter<TableModel> sorter; //Declaramos globalmente
     private Timer timer; //Timer global 
     
-//CARLOOOS--------------------------------------------------------------------------------------------------------------------    
+//CARLOS-9959-23-848-----------------------------------------------------------------------------------    
     public Administrador() {
         
         initComponents();
@@ -92,7 +92,7 @@ public class Administrador extends javax.swing.JFrame {
     }
     
     
-   //CRISTIAN-----------------------------------------------------------------------------------------------------------------
+   //CARLOS-9959-23-848
          private void iniciarActualizacion() {
     // ajustar tiempo
      timer = new Timer(5000, new ActionListener() {
