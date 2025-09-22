@@ -79,7 +79,7 @@ public class Administrador extends javax.swing.JFrame {
     }
 
     
-    //CRISTIAN----------------------------------------------------------------------------------------------------------------
+    //CRISTIAN 9959-23-1567 
     
     private void Alineacion_Columnas(){
         DefaultTableCellRenderer Alinear = new DefaultTableCellRenderer();
