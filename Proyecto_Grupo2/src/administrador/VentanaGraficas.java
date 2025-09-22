@@ -15,10 +15,10 @@ import java.util.LinkedList;
  * @author david
  */
 
-//CARLOS-------------------------------------------------------------------------------------------------------------------------
+//CARLOS-9959-23-848
 public class VentanaGraficas extends javax.swing.JFrame {
 
-//CARLOS----------------------------------------------------------------------------------------------------------------------
+//CARLOS-9959-23-848
      public VentanaGraficas() {
         initComponents();
         setIconImage(getIconImage());
@@ -45,7 +45,7 @@ public class VentanaGraficas extends javax.swing.JFrame {
        return Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/logo.png"));
     }  
      
-//CARLOS-------------------------------------------------------------------------------------------------------------------------
+//CARLOS-9959-23-848
     class GraficaMemoria extends JPanel {
         private LinkedList<Integer> datos = new LinkedList<>();
         private final int MAX_DATOS = 60;
@@ -69,7 +69,7 @@ public class VentanaGraficas extends javax.swing.JFrame {
         }
 
         @Override
-//CARLOOOOOOOOOOOOS----------------------------------------------------------------------------------------------------------------        
+//CARLOS-9959-23-848
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             Graphics2D g2 = (Graphics2D) g;

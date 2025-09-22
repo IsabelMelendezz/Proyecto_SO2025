@@ -35,7 +35,7 @@ public class Administrador extends javax.swing.JFrame {
     private TableRowSorter<TableModel> sorter; //Declaramos globalmente
     private Timer timer; //Timer global 
     
-//CARLOS-9959-23-848-----------------------------------------------------------------------------------    
+//CARLOS-9959-23-848    
     public Administrador() {
         
         initComponents();
