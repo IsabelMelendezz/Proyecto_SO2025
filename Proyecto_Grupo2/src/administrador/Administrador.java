@@ -36,11 +36,40 @@ public class Administrador extends javax.swing.JFrame {
     private TableRowSorter<TableModel> sorter; //Declaramos globalmente
     private Timer timer; //Timer global 
     
+    //VICTOR 9959-23-10733
+    private void filtrarTabla() {
+    String texto = jTextField1.getText().trim();
+
+    if (texto.isEmpty()) {
+        sorter.setRowFilter(null); // Quita el filtro si no hay texto
+    } else {
+        sorter.setRowFilter(javax.swing.RowFilter.regexFilter("(?i)" + texto, 0)); 
+        // "(?i)" -> ignora mayúsculas/minúsculas
+        // 0 -> columna del nombre del proceso
+    }
+}
+
 //CARLOS-9959-23-848    
     public Administrador() {
         
         initComponents();
         setIconImage(getIconImage());
+  // --- FILTRO DE BUSQUEDA --- Victor 9959-23-1033
+jTextField1.getDocument().addDocumentListener(new javax.swing.event.DocumentListener() {
+    @Override
+    public void insertUpdate(javax.swing.event.DocumentEvent e) {
+        filtrarTabla();
+    }
+    @Override
+    public void removeUpdate(javax.swing.event.DocumentEvent e) {
+        filtrarTabla();
+    }
+    @Override
+    public void changedUpdate(javax.swing.event.DocumentEvent e) {
+        filtrarTabla();
+    }
+});
+
         
 //DISEÑO TABLA------------------------------------------------------------------------------------------
         JTableHeader tabla = jtabla_datos.getTableHeader();
@@ -242,6 +271,8 @@ public void Matar_proceso() {
         No_procesos = new javax.swing.JTextField();
         btnEdit = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Administrador de tareas");
@@ -308,6 +339,16 @@ public void Matar_proceso() {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Lucida Console", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(230, 230, 230));
+        jLabel3.setText("BUSCAR");
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -319,7 +360,11 @@ public void Matar_proceso() {
                 .addComponent(No_procesos, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
                 .addComponent(btnAyuda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
+                .addComponent(jLabel3)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(btnEdit)
                 .addGap(58, 58, 58)
                 .addComponent(btnFprocesos, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -337,7 +382,9 @@ public void Matar_proceso() {
                         .addComponent(btnFprocesos, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
                         .addComponent(jLabel2)
                         .addComponent(No_procesos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnAyuda, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -377,6 +424,10 @@ public void Matar_proceso() {
             ex.printStackTrace();
         }
     }//GEN-LAST:event_btnAyudaActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
        
 
@@ -450,7 +501,9 @@ public void Matar_proceso() {
     private javax.swing.JButton btnEdit;
     private javax.swing.JButton btnFprocesos;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable jtabla_datos;
     // End of variables declaration//GEN-END:variables
 }
