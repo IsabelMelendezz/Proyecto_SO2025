@@ -192,14 +192,14 @@ public class Administrador extends javax.swing.JFrame {
 }
 
 
-    //ISA---------------------------------------------------------------------------------------------------------------------------
+    //Isabel Melendez 9959-23-1379---------------------------------------------------------------------------------------------------------------------------
     void LimpiarTabla(){
        if (jtabla_datos.getModel() instanceof DefaultTableModel) {
         modelo = (DefaultTableModel) jtabla_datos.getModel();
         modelo.setRowCount(0); 
     }
     }
-   //ISA----------------------------------------------------------------------------------------------------------------------------- 
+   //Isabel Melendez 9959-23-1379----------------------------------------------------------------------------------------------------------------------------- 
 public void Matar_proceso() {
     modelo = (DefaultTableModel) jtabla_datos.getModel();
 
@@ -363,6 +363,7 @@ public void Matar_proceso() {
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
         // TODO add your handling code here:
+        //Isabel Melendez 9959-23-1379
         try {
             if ((new File("src\\ayuda\\Ayuda Administrador.chm")).exists()) {
                 Process p = Runtime

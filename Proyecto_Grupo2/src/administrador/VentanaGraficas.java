@@ -102,7 +102,7 @@ public class VentanaGraficas extends javax.swing.JFrame {
         }
     }
 
-//ISAAAAA-------------------------------------------------------------------------------------------------------------------------
+//Isabel Melendez 9959-23-1379-------------------------------------------------------------------------------------------------------------------------
     class GraficaCPU extends JPanel {
         private LinkedList<Integer> datos = new LinkedList<>();
         private final int MAX_DATOS = 60;
@@ -122,7 +122,7 @@ public class VentanaGraficas extends javax.swing.JFrame {
             datos.add(porcentaje);
             repaint();
         }
-//ISAAA------------------------------------------------------------------------------------------------------------------------
+//Isabel Melendez 9959-23-1379------------------------------------------------------------------------------------------------------------------------
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
