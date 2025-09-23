@@ -1,29 +1,42 @@
 
 package administrador;
 
+//DISEÑO Y COMPONENTES 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
+
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
+
+//EVENTOS
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+//CPU Y MEMORIA 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+//AYUDA
+import java.io.File;
+import java.io.IOException;
+
+//ORDEN MAYO A MENOR 
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
@@ -134,14 +147,14 @@ jTextField1.getDocument().addDocumentListener(new javax.swing.event.DocumentList
     timer.start();
 }
     
-     //VICTOOOOOOOOOOOOOOOOOOOR---------------------------------------------------------------------------------------------    
+     //VICTOR 9959-23-10733   
     @Override
     public Image getIconImage() {
        return Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/logo.png"));
     }
     
     
-//VICTOOOOOOOOOORRRRRRRRRRRRR----------------------------------------------------------------------------------------------------
+//VICTOR 9959-23-10733
   private void mostrar_procesos() {
    
     try {

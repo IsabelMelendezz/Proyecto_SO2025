@@ -39,7 +39,7 @@ public class VentanaGraficas extends javax.swing.JFrame {
         setTitle("Gráficas del sistema");
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
-//VICTOOR--------------------------------------------------------------------------------------------------------------------------
+//VICTOR 9959-23-10733
    @Override
     public Image getIconImage() {
        return Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/logo.png"));
