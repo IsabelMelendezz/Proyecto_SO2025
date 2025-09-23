@@ -56,7 +56,7 @@ public class VentanaGraficas extends javax.swing.JFrame {
             Timer timer = new Timer(1000, e -> actualizarDatos());
             timer.start();
         }
-//CRISTIAAAAAAAAAAAAAAAAAAAAAAAA--------------------------------------------------------------------------------------------------
+//CRISTIAN SIPAC 9959-23-1567
         private void actualizarDatos() {
             long total = osBean.getTotalPhysicalMemorySize();
             long libre = osBean.getFreePhysicalMemorySize();
