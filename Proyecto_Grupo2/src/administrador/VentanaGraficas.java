@@ -113,7 +113,7 @@ public class VentanaGraficas extends javax.swing.JFrame {
             Timer timer = new Timer(1000, e -> actualizarDatos());
             timer.start();
         }
-//CRISTIAAAAAN-----------------------------------------------------------------------------------------------------------------
+//CRISTIAN 9959-23-1567
         private void actualizarDatos() {
             double load = osBean.getSystemCpuLoad();
             int porcentaje = load >= 0 ? (int) (load * 100) : 0;
